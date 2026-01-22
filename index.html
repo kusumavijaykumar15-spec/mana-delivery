@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana Delivery | Kagaznagar</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f9d58">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f9fafb;
+            color: #333;
+        }
+        section { padding: 50px 20px; }
+        .container { max-width: 1100px; margin: auto; }
+
+        .hero {
+            background: linear-gradient(135deg, #0f9d58, #34a853);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+        .hero img { max-width: 220px; margin-bottom: 15px; }
+        .hero h1 { font-size: 32px; }
+        .hero p { font-size: 18px; }
+
+        .btn {
+            display: inline-block;
+            background: #0f9d58;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .steps, .services, .reasons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        th { background: #0f9d58; color: white; }
+
+        footer {
+            background: #0f9d58;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Floating buttons */
+        .whatsapp-btn, .call-float {
+            position: fixed;
+            bottom: 20px;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+
+        .whatsapp-btn {
+            right: 20px;
+            background: #25d366;
+        }
+
+        .call-float {
+            left: 20px;
+            background: #0f9d58;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <img src="logo.png" alt="Mana Delivery Logo">
+    <h1>Mana Delivery</h1>
+    <p>Just Call. We Deliver Everything.</p>
+    <a href="tel:8919295509" class="btn">📞 CALL NOW</a>
+</section>
+
+<section>
+    <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="card">📞 Call Us</div>
+            <div class="card">📝 Tell Items</div>
+            <div class="card">🚚 We Deliver</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">🥦 Grocery</div>
+            <div class="card">🍔 Food</div>
+            <div class="card">💊 Medicines</div>
+            <div class="card">🍪 Snacks</div>
+            <div class="card">🍚 Rice Bags</div>
+            <div class="card">📦 Pick & Drop</div>
+            <div class="card">🏪 Any Shop Items</div>
+            <div class="card">🛍️ Multiple Shops</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Delivery Charges</h2>
+        <table>
+            <tr><th>Service</th><th>Price</th></tr>
+            <tr><td>Up to 5 items</td><td>₹30</td></tr>
+            <tr><td>6–10 items</td><td>₹50</td></tr>
+            <tr><td>More than 10 items</td><td>₹100</td></tr>
+            <tr><td>25kg Rice Bag</td><td>₹50</td></tr>
+            <tr><td>Nearby Towns</td><td>₹80</td></tr>
+            <tr><td>Extra Shop</td><td>₹10</td></tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Service Area</h2>
+        <p>Kagaznagar, Telangana & nearby towns</p>
+    </div>
+</section>
+
+<footer>
+    © Mana Delivery | Kagaznagar | 📞 8919295509
+</footer>
+
+<!-- Floating Buttons -->
+<a href="https://wa.me/918919295509" class="whatsapp-btn">💬</a>
+<a href="tel:8919295509" class="call-float">📞</a>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
